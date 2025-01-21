@@ -43,10 +43,12 @@ client.on('interactionCreate', async (interaction) => {
     if (!interaction.isChatInputCommand())
         return;
 
+    //PING
     if (interaction.commandName === 'ping') {
         await interaction.reply({ content: 'Pong!' });
     }
 
+    //SLOTS v.1.0.1
     if (interaction.commandName === 'slots') {
         let slots = '';
         
@@ -78,8 +80,6 @@ client.on('interactionCreate', async (interaction) => {
                 slots += '7,';
         }
 
-        
-
         let slotsList = slots.split(',').slice(0, -1);
         console.log(slotsList);
 
@@ -100,6 +100,12 @@ client.on('interactionCreate', async (interaction) => {
 
         await interaction.reply({ content: `${output}` });
     }
+
+    //DICE v.1.0.1
+    if (interaction.commandName === 'roll') {
+        await interaction.reply({ content: `${Math.floor(Math.random()*6 + 1)}` });
+    }
+
 })
 
 client.login(process.env.DISCORD_TOKEN);

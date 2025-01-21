@@ -1,3 +1,5 @@
+//RUN TO REGISTER NEW COMMANDS AND UPDATE OLD ONES
+
 import dotenv from 'dotenv'
 dotenv.config();
 
@@ -6,11 +8,15 @@ import { REST, Routes } from 'discord.js';
 const commands = [
     {
         name: 'ping',
-        description: 'returns pong',
+        description: 'Pong!',
     },
     {
         name: 'slots',
         description: 'Play a Traditional 3 Reel slot machine!',
+    },
+    {
+        name: 'roll',
+        description: 'Roll a 6-sided die',
     },
 ]
 
