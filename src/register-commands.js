@@ -10,7 +10,7 @@ const commands = [
     },
     {
         name: 'slots',
-        description: 'Use the Slot Machine!',
+        description: 'Play a Traditional 3 Reel slot machine!',
     },
 ]
 
