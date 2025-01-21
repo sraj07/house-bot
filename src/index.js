@@ -62,11 +62,9 @@ client.on('interactionCreate', async (interaction) => {
         let selection;
         for (let i=0; i<3; i++){
             selection = Math.floor(Math.random()*101);
-            if (selection == 0) {
+            if (selection == 0)
                 slots += 'gremlin,';
-                break;
-            }
-            if (selection <= 8)
+            else if (selection <= 8)
                 slots += 'blank,'
             else if (selection <= 40)
                 slots += 'cherries,';
@@ -91,6 +89,8 @@ client.on('interactionCreate', async (interaction) => {
             '2bar': ':two:',
             '3bar': ':three:',
             '7': '<:7_:1331302219018141706>',
+            'gremlin': ':ogre:',
+            'blank': ':no_entry_sign:'
         };
 
         let output = '';
