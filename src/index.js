@@ -101,9 +101,10 @@ client.on('interactionCreate', async (interaction) => {
         await interaction.reply({ content: `${output}` });
     }
 
-    //DICE v.1.0.1
+    //DICE v.2.0.1
     if (interaction.commandName === 'roll') {
-        await interaction.reply({ content: `${Math.floor(Math.random()*6 + 1)}` });
+        const sides = interaction.options.get('num-of-sides').value;
+        await interaction.reply({ content: `${Math.floor(Math.random()*sides + 1)}` });
     }
 
 })
